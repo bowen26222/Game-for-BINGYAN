@@ -15,10 +15,10 @@ TagManager:
   - 
   - 
   - Ground
-  - gun
-  - player
+  - Gun
+  - Player
   - Enemy
-  - 
+  - Enemygun
   - 
   - 
   - 
@@ -44,6 +44,12 @@ TagManager:
     locked: 0
   - name: Ground
     uniqueID: 1284813971
+    locked: 0
+  - name: Enemy
+    uniqueID: 2814534145
+    locked: 0
+  - name: Enemygun
+    uniqueID: 1594352833
     locked: 0
   - name: player
     uniqueID: 2180893133

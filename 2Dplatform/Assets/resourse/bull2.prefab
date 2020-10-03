@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8188616242068326769}
   - component: {fileID: 6179564781003244485}
   - component: {fileID: 1838077135565462186}
-  - component: {fileID: 974027476565557887}
+  - component: {fileID: 776618018}
   m_Layer: 0
   m_Name: bull2
   m_TagString: Untagged
@@ -121,7 +121,7 @@ CircleCollider2D:
   m_Offset: {x: -0.0024573803, y: 0.058971137}
   serializedVersion: 2
   m_Radius: 0.19008899
---- !u!114 &974027476565557887
+--- !u!114 &776618018
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -130,9 +130,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3485956981953236597}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eee8c66a8870fb9478dd2105d26dfe6e, type: 3}
+  m_Script: {fileID: 11500000, guid: 197c40902d28e334dbc4889c3a50c257, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
   rb: {fileID: 6179564781003244485}
+  Player: {fileID: 0}
   damage: 1
