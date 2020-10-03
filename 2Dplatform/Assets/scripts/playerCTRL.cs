@@ -18,6 +18,7 @@ public class playerCTRL : MonoBehaviour
     public LayerMask GroundLayerMask;
     bool IsOnGround;
     bool IsJumping;
+    bool IsSquat;
     float velocityX;
     private bool IfFacingRight=true;
     Animator Anim;
@@ -52,7 +53,7 @@ public class playerCTRL : MonoBehaviour
             Anim.SetFloat("Walk", 0f);
         }
 
-        if(Input.GetAxis("Jump")== 1&& !IsJumping)
+        if(Input.GetAxis("Jump")== 1&& !IsJumping&&!IsSquat)
         {
             Anim.SetBool("Jump",true);
             Rig.velocity = new Vector2(Rig.velocity.x, JumpingSpeed);
@@ -77,6 +78,21 @@ public class playerCTRL : MonoBehaviour
         else if(Rig.velocity.x < 0 && IfFacingRight)
         {
             flip();
+        }
+
+        if (Input.GetAxis("Squat") > 0 && IsSquat == false)
+        {
+            GetComponent<CapsuleCollider2D>().size = new Vector2(0.8151283f, 0.577193f);
+            Anim.SetBool("Squat", true);
+            IsSquat = true;
+            WalkSpeed *= (float)0.5f;
+        }
+        else if(IsSquat == true && Input.GetAxis("Squat") == 0)
+        {
+            GetComponent<CapsuleCollider2D>().size = new Vector2(0.8151283f, 1.39697f);
+            Anim.SetBool("Squat", false);
+            IsSquat = false;
+            WalkSpeed *= 2;
         }
     }
     void SwitchAnimation()
@@ -116,6 +132,6 @@ public class playerCTRL : MonoBehaviour
     private void flip()
     {
         IfFacingRight = !IfFacingRight;
-        transform.localScale = Vector3.Scale(transform.localScale, new Vector3(-1, 1, 1));
+        transform.Rotate(0f, 180f, 0f);
     }
 }
