@@ -12,12 +12,21 @@ public class Attack : MonoBehaviour
     private PolygonCollider2D Collider2D;
     private Transform Enemy;
     private SpriteRenderer render;
+    public List<Transform> targets;
     void Awake()
     { 
         Anim = GetComponent<Animator>();
         Collider2D = GetComponent<PolygonCollider2D>();
         render = GameObject.FindGameObjectWithTag("Gun").GetComponent<SpriteRenderer>();
-        Enemy = GameObject.FindGameObjectWithTag("Enemy").GetComponent<Transform>();
+    }
+    private void Update()
+    {
+        targets = new List<Transform>();
+        addAllElements();
+        if (targets.Count != 0)
+        {
+            targetEnemy();
+        }
     }
     private void FixedUpdate()
     {
@@ -29,10 +38,14 @@ public class Attack : MonoBehaviour
                 render.GetComponent<Weapon>().SwitchShoot(true);
                 attack();
             }
-            if(distance > radius)
+            if(distance > radius )
             {
                 render.GetComponent<Weapon>().SwitchShoot(false);
             }
+        }
+        else
+        {
+            render.GetComponent<Weapon>().SwitchShoot(false);
         }
        
     }
@@ -49,7 +62,9 @@ public class Attack : MonoBehaviour
             Anim.SetTrigger("Attack");
             IsAttack = true;
         }
+#pragma warning disable IDE0051 // 删除未使用的私有成员
     }void enableAttack()
+#pragma warning restore IDE0051 // 删除未使用的私有成员
     {
         Collider2D.enabled = true;
         StartCoroutine(disableHitBox());
@@ -67,6 +82,34 @@ public class Attack : MonoBehaviour
         if (other.gameObject.CompareTag("Enemy"))
         {
             other.GetComponent<Enemy>().TakeDamage(damage);
+        }
+    }
+    public void addAllElements()
+    {
+        GameObject[] go = GameObject.FindGameObjectsWithTag("Enemy");
+        foreach (GameObject enemy in go)
+        {
+            addTarget(enemy.transform);
+        }
+        sortTargetByDistance();
+    }
+
+    private void addTarget(Transform enemy)
+    {
+        targets.Add(enemy);
+    }
+
+    private void sortTargetByDistance()
+    {
+        targets.Sort(delegate (Transform t1, Transform t2) {
+            return Vector3.Distance(t1.position, transform.position).CompareTo(Vector3.Distance(t2.position, transform.position));
+        });
+    }
+    public void targetEnemy()
+    {
+        if (Enemy != targets[0])
+        {
+            Enemy = targets[0];
         }
     }
 }

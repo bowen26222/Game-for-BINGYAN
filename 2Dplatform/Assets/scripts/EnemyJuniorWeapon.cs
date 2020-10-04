@@ -13,7 +13,6 @@ public class EnemyJuniorWeapon : MonoBehaviour
     bool IsShooting;
     float direction;
     private Transform Player;
-    private Vector2 gunDirection;
     public void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
@@ -38,7 +37,6 @@ public class EnemyJuniorWeapon : MonoBehaviour
     IEnumerator PrepareShoot(float time)
     {
         IsShooting = true;
-        gunDirection = (Player.position - transform.position).normalized;
         if (direction > 0)
         {
             transform.eulerAngles = new Vector3(0, 0, 0);
