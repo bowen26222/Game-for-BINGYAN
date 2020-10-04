@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - Ground
+  - BackGrond
+  - EnemyGun
+  - Gun
+  - Bull
   layers:
   - Default
   - TransparentFX
@@ -19,8 +24,8 @@ TagManager:
   - Player
   - Enemy
   - Enemygun
-  - 
-  - 
+  - BackGrond
+  - Bull
   - 
   - 
   - 
@@ -42,6 +47,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: BackGrond
+    uniqueID: 272818957
+    locked: 0
   - name: Ground
     uniqueID: 1284813971
     locked: 0
@@ -51,9 +59,12 @@ TagManager:
   - name: Enemygun
     uniqueID: 1594352833
     locked: 0
-  - name: player
+  - name: Player
     uniqueID: 2180893133
     locked: 0
-  - name: gun
+  - name: Gun
     uniqueID: 621437083
+    locked: 0
+  - name: Bull
+    uniqueID: 4105233223
     locked: 0

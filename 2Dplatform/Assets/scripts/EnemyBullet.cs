@@ -13,18 +13,20 @@ public class EnemyBullet : MonoBehaviour
     {
         playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
         rb.velocity = transform.right * speed * -1 ;
-        Destroy(gameObject, 1.0f);
+        Destroy(gameObject, 3.0f);
     }
         void OnTriggerEnter2D(Collider2D other)
     {
-
         if (other.gameObject.CompareTag("Player") && other.GetType().ToString() == "UnityEngine.CapsuleCollider2D")
         {
             if (playerHealth != null)
             {
                 playerHealth.DamagePlayer(damage);
             }
-
+            Destroy(gameObject);
+        }
+        else if (other.gameObject.CompareTag("Ground"))
+        {
             Destroy(gameObject);
         }
     }

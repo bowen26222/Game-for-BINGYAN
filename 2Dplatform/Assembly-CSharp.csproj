@@ -68,7 +68,8 @@
     <Compile Include="Assets\scripts\CameraFollow.cs" />
     <Compile Include="Assets\scripts\Enemy.cs" />
     <Compile Include="Assets\scripts\EnemyBullet.cs" />
-    <Compile Include="Assets\scripts\EnemyWeapon.cs" />
+    <Compile Include="Assets\scripts\EnemyJuniorWeapon.cs" />
+    <Compile Include="Assets\scripts\EnemySeniorWeapon.cs" />
     <Compile Include="Assets\scripts\Enemyfort.cs" />
     <Compile Include="Assets\scripts\LoadScene.cs" />
     <Compile Include="Assets\scripts\PlayerHealth.cs" />

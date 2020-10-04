@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 6179564781003244485}
   - component: {fileID: 1838077135565462186}
   - component: {fileID: 974027476565557887}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: bull3
-  m_TagString: Untagged
+  m_TagString: Bull
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -70,8 +70,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -189734073
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 5551defebcfac4b40a237ceb16718987, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
