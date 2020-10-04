@@ -71,11 +71,11 @@ public class playerCTRL : MonoBehaviour
         {
             Rig.velocity += Vector2.up * Physics2D.gravity.y * (LowJumpMultiplier - 1) * Time.fixedDeltaTime;
         }
-        if (Rig.velocity.x > 0&& !IfFacingRight)
+        if (Rig.velocity.x > 0.1&& !IfFacingRight)
         {
             flip();
         }
-        else if(Rig.velocity.x < 0 && IfFacingRight)
+        else if(Rig.velocity.x < -0.1 && IfFacingRight)
         {
             flip();
         }

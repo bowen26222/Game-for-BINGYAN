@@ -40,7 +40,7 @@ public abstract class Enemy : MonoBehaviour
     }
     public void OnTriggerEnter2D(Collider2D other)
     {
-        
+        Debug.Log(other.tag);
         if(other.gameObject.CompareTag("Player") && other.GetType().ToString() == "UnityEngine.CapsuleCollider2D")
         {
             if (playerHealth != null)

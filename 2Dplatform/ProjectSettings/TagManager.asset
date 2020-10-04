@@ -10,6 +10,7 @@ TagManager:
   - EnemyGun
   - Gun
   - Bull
+  - Item
   layers:
   - Default
   - TransparentFX
@@ -26,8 +27,8 @@ TagManager:
   - Enemygun
   - BackGrond
   - Bull
-  - 
-  - 
+  - Item
+  - Triggerbox
   - 
   - 
   - 

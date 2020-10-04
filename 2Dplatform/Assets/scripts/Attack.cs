@@ -62,9 +62,7 @@ public class Attack : MonoBehaviour
             Anim.SetTrigger("Attack");
             IsAttack = true;
         }
-#pragma warning disable IDE0051 // 删除未使用的私有成员
     }void enableAttack()
-#pragma warning restore IDE0051 // 删除未使用的私有成员
     {
         Collider2D.enabled = true;
         StartCoroutine(disableHitBox());
