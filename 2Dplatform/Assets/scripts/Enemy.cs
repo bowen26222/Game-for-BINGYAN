@@ -7,6 +7,7 @@ public abstract class Enemy : MonoBehaviour
     public int health;
     public int enemydamage;
     public float flashTime;
+    private bool IsDamage;
     private SpriteRenderer sr;
     private Color originalColor;
     private PlayerHealth playerHealth;
@@ -26,8 +27,8 @@ public abstract class Enemy : MonoBehaviour
     }
     public void TakeDamage(int damage)
     {
-        health -= damage;
-        FlashColor(flashTime);
+         health -= damage;
+         FlashColor(flashTime);
     }
     void FlashColor(float time)
     {
@@ -40,7 +41,6 @@ public abstract class Enemy : MonoBehaviour
     }
     public void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log(other.tag);
         if(other.gameObject.CompareTag("Player") && other.GetType().ToString() == "UnityEngine.CapsuleCollider2D")
         {
             if (playerHealth != null)

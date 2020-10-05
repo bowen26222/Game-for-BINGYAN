@@ -157,6 +157,6 @@ MonoBehaviour:
   explodeRange: {fileID: 2659224826731774163, guid: 3aa33a8ce2eedb44d98f49f3fd460f95,
     type: 3}
   startSpeed: {x: 4, y: 10}
-  delayExplodeTime: 0.5
-  hitBoxTime: 0.6
-  destroyBombTime: 0.7
+  delayExplodeTime: 1.1
+  hitBoxTime: 0.7
+  destroyBombTime: 0.8

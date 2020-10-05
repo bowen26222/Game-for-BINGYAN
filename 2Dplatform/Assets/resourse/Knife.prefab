@@ -11,10 +11,12 @@ GameObject:
   - component: {fileID: 8023268455335744207}
   - component: {fileID: 3299645465100355616}
   - component: {fileID: 9205510228618666852}
+  - component: {fileID: 1402485872}
+  - component: {fileID: 1402485871}
   - component: {fileID: 5271486930210540643}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Knife
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -69,8 +71,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1480433151
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e5a2ce8bca0dfb8419016e4d566e8624, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -93,7 +95,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.61792874, y: 0.031143278}
@@ -109,6 +111,43 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.25748098, y: 1.3193581}
   m_EdgeRadius: 0
+--- !u!50 &1402485872
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2350132521055494561}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 1
+  m_Constraints: 4
+--- !u!70 &1402485871
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2350132521055494561}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.09272194, y: 0.13909614}
+  m_Size: {x: 0.638711, y: 1.7206193}
+  m_Direction: 0
 --- !u!114 &5271486930210540643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,10 +160,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21c66e61e5f6c064fbda48fac83207e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
-  enemydamage: 0
-  flashTime: 0
-  radius: 0
-  Speed: 0
-  AccelerateTime: 0
-  DecelerateTime: 0
+  health: 5
+  enemydamage: 5
+  flashTime: 0.2
+  radius: 30
+  Speed: 6
+  AccelerateTime: 0.09
+  DecelerateTime: 0.09

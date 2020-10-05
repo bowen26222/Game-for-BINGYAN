@@ -41,6 +41,6 @@ public class PlayerHealth : MonoBehaviour
             yield return new WaitForSeconds(seconds);
         }
         Render.enabled = true;
-        IsDamage = false;
+        IsDamage = true;
     }
 }

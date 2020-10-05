@@ -45,4 +45,20 @@ public class Bomb : MonoBehaviour
     {
         Destroy(gameObject);
     }
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        Enemy enemy = other.GetComponent<Enemy>();
+        if (enemy != null)
+        {
+            anim.SetTrigger("Explode");
+            Invoke("GenExplosionRange", hitBoxTime);
+            Invoke("DestroyThisBomb", destroyBombTime);
+        }
+        else if (other.gameObject.CompareTag("Player"))
+        {
+            anim.SetTrigger("Explode");
+            Invoke("GenExplosionRange", hitBoxTime);
+            Invoke("DestroyThisBomb", destroyBombTime);
+        }
+    }
 }

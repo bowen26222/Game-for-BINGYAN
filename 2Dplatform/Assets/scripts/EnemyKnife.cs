@@ -26,13 +26,13 @@ public class EnemyKnife : Enemy
         {
             float distance = (transform.position - Player.position).sqrMagnitude;
             direction = transform.position.x - Player.position.x;
-            if (distance < radius && direction < 0)
+            if (distance < radius && direction < -0.8)
             {
-                Rig.velocity = new Vector2(Mathf.SmoothDamp(Rig.velocity.x, Speed * Time.fixedDeltaTime * 60, ref velocityX, AccelerateTime), Rig.velocity.y);
+                Rig.velocity = new Vector2(Mathf.SmoothDamp(Rig.velocity.x, (Speed * Time.fixedDeltaTime * 60 - distance*0.1f ) , ref velocityX, AccelerateTime), Rig.velocity.y);
             }
-            else if(distance < radius && direction > 0)
+            else if(distance < radius && direction > 0.8)
             {
-                Rig.velocity = new Vector2(Mathf.SmoothDamp(Rig.velocity.x, Speed * Time.fixedDeltaTime * 60 * -1, ref velocityX, AccelerateTime), Rig.velocity.y);
+                Rig.velocity = new Vector2(Mathf.SmoothDamp(Rig.velocity.x, (Speed * Time.fixedDeltaTime * 60 - distance*0.1f ) * -1, ref velocityX, AccelerateTime), Rig.velocity.y);
             }
             else
             {
