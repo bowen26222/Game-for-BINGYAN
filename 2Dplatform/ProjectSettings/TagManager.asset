@@ -11,6 +11,8 @@ TagManager:
   - Gun
   - Bull
   - Item
+  - Triggerbox
+  - Manu
   layers:
   - Default
   - TransparentFX
@@ -66,6 +68,12 @@ TagManager:
   - name: Gun
     uniqueID: 621437083
     locked: 0
+  - name: Item
+    uniqueID: 3851616493
+    locked: 0
   - name: Bull
     uniqueID: 4105233223
+    locked: 0
+  - name: Triggerbox
+    uniqueID: 3631161969
     locked: 0

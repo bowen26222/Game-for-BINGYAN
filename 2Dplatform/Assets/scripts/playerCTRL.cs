@@ -83,6 +83,8 @@ public class playerCTRL : MonoBehaviour
         if (Input.GetAxis("Squat") > 0 && IsSquat == false)
         {
             GetComponent<CapsuleCollider2D>().size = new Vector2(0.8151283f, 0.577193f);
+            GetComponent<CapsuleCollider2D>().offset = new Vector2(0.005381584f, -0.5f);
+            GameObject.FindGameObjectWithTag("Gunposition").transform.localPosition = new Vector3(0.76f, -0.85f,0);
             Anim.SetBool("Squat", true);
             IsSquat = true;
             WalkSpeed *= (float)0.5f;
@@ -90,6 +92,8 @@ public class playerCTRL : MonoBehaviour
         else if(IsSquat == true && Input.GetAxis("Squat") == 0)
         {
             GetComponent<CapsuleCollider2D>().size = new Vector2(0.8151283f, 1.39697f);
+            GetComponent<CapsuleCollider2D>().offset = new Vector2(0.005381584f, -0.1956443f);
+            GameObject.FindGameObjectWithTag("Gunposition").transform.localPosition = new Vector3(0.76f, -0.37f, 0);
             Anim.SetBool("Squat", false);
             IsSquat = false;
             WalkSpeed *= 2;

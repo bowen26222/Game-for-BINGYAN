@@ -74,13 +74,21 @@
     <Compile Include="Assets\scripts\EnemySeniorWeapon.cs" />
     <Compile Include="Assets\scripts\Enemyfort.cs" />
     <Compile Include="Assets\scripts\ExplosionRange.cs" />
+    <Compile Include="Assets\scripts\GetGun.cs" />
+    <Compile Include="Assets\scripts\GunItem.cs" />
+    <Compile Include="Assets\scripts\KillTriggerbox.cs" />
     <Compile Include="Assets\scripts\LoadScene.cs" />
     <Compile Include="Assets\scripts\PlayerHealth.cs" />
+    <Compile Include="Assets\scripts\PlayerUI.cs" />
     <Compile Include="Assets\scripts\Weapon.cs" />
+    <Compile Include="Assets\scripts\WeaponS.cs" />
+    <Compile Include="Assets\scripts\bullUI.cs" />
     <Compile Include="Assets\scripts\playerCTRL.cs" />
     <Compile Include="Assets\scripts\throwbomb.cs" />
     <Compile Include="Assets\scripts\开始按钮.cs" />
+    <Compile Include="Assets\scripts\游戏说明.cs" />
     <Compile Include="Assets\scripts\退出按钮.cs" />
+    <Compile Include="Assets\scripts\重新开始.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.11f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

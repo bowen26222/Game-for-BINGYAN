@@ -14,7 +14,7 @@ public class EnemyKnife : Enemy
     Rigidbody2D Rig;
     private Transform Player;
     private float direction;
-    private void Start()
+    private new void Start()
     {
         base.Start();
         Player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();

@@ -54,7 +54,8 @@ public class Bomb : MonoBehaviour
             Invoke("GenExplosionRange", hitBoxTime);
             Invoke("DestroyThisBomb", destroyBombTime);
         }
-        else if (other.gameObject.CompareTag("Player"))
+        PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
+        if (playerHealth != null)
         {
             anim.SetTrigger("Explode");
             Invoke("GenExplosionRange", hitBoxTime);
