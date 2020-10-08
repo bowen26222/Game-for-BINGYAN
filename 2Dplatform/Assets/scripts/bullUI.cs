@@ -5,16 +5,17 @@ using UnityEngine.UI;
 
 public class bullUI : MonoBehaviour
 {
-    public int startPlayerlife;
-    public Text Playerlife;
-    public static int CurrentPlayerlife;
+    public int startBull;
+    public Text Bullnumber;
+    public static int CurrentBull;
     void Start()
     {
-        CurrentPlayerlife = startPlayerlife;
+        CurrentBull = startBull;
     }
 
     // Update is called once per frame
     void Update()
     {
+        Bullnumber.text = CurrentBull.ToString();
     }
 }

@@ -7,23 +7,28 @@ using UnityEngine.UI;
 public class PlayerHealth : MonoBehaviour
 {
     // Start is called before the first frame update
-
+    [Header("有用")]
     public int Blinks;
     public float time;
-    private Renderer Render;
+    public int health;
+    public float invisibleTime;
+    [Header("无用")]
+    public bullUI bullUI;
+    public GetGun GetGun;
     public PlayerUI PlayerUI;
     public GameObject Player;
     public GameObject Panel;
     bool IsDamage;
-    public int Health; 
-    public int health;
-    public float invisibleTime;
+    public int Health;     
     public Transform Playertrans;
+    private Renderer Render;
     private void Start()
     {
+        GetGun = GameObject.FindGameObjectWithTag("Gunposition").GetComponent<GetGun>();
+        bullUI = GameObject.FindGameObjectWithTag("BullUI").GetComponent<bullUI>();
         Health = health;
         Render = GetComponent<Renderer>();
-        PlayerUI = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerUI>();
+        PlayerUI = GameObject.FindGameObjectWithTag("PlayerUI").GetComponent<PlayerUI>();
     }
     public void DamagePlayer(int damage)
     {
@@ -32,6 +37,8 @@ public class PlayerHealth : MonoBehaviour
             Health -= damage;
             if (Health <= 0)
             {
+                GetGun.currentgun = 0;
+                bullUI.CurrentBull = 999;
                 Health = health;
                 PlayerUI.CurrentPlayerlife -= 1;
                 Playertrans = GetComponent<Transform>();

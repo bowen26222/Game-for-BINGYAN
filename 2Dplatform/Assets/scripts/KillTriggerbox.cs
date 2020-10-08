@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class KillTriggerbox : MonoBehaviour
 {
+    public bullUI bullUI;
+    public GetGun GetGun;
     public PlayerUI PlayerUI;
     public GameObject Panel;
     void Start()
     {
-        PlayerUI = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerUI>();
+        GetGun = GameObject.FindGameObjectWithTag("Gunposition").GetComponent<GetGun>();
+        bullUI = GameObject.FindGameObjectWithTag("BullUI").GetComponent<bullUI>();
+        PlayerUI = GameObject.FindGameObjectWithTag("PlayerUI").GetComponent<PlayerUI>();
     }
 
     void Update()
@@ -20,6 +24,8 @@ public class KillTriggerbox : MonoBehaviour
         PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
         if (playerHealth != null)
         {
+            GetGun.currentgun = 0;
+            bullUI.CurrentBull = 999;
             playerHealth.Health = playerHealth.health;
             PlayerUI.CurrentPlayerlife -= 1;
             playerHealth.Playertrans = other.GetComponent<Transform>();

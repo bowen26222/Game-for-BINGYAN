@@ -7,8 +7,9 @@ public class Weapon : MonoBehaviour
 {
     public Transform firePoint;
     public GameObject bulletPrefab;
-    bool IsAttack;
-    bool IsUp;
+    public float Cooltime;
+    public bool IsAttack;
+    public bool IsUp;
     // Update is called once per frame
     void Update()
     {
@@ -22,7 +23,7 @@ public class Weapon : MonoBehaviour
             IsUp = false;
             transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, 0);
         }
-        if (Input.GetButtonDown("Fire1")&&!IsAttack)
+        if (Input.GetButtonDown("Fire1") && !IsAttack)
         {
             Shoot();
         }

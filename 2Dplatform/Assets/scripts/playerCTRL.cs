@@ -16,6 +16,8 @@ public class playerCTRL : MonoBehaviour
     public Vector2 PointOffset;
     public Vector2 Size;
     public LayerMask GroundLayerMask;
+    [Header("菜单")]
+    public 暂停按钮 stop;
     bool IsOnGround;
     bool IsJumping;
     bool IsSquat;

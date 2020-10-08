@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 2247739593282346871}
   - component: {fileID: 8188616242068326769}
+  - component: {fileID: 675291214857255380}
   - component: {fileID: 6179564781003244485}
-  - component: {fileID: 1838077135565462186}
-  - component: {fileID: 974027476565557887}
+  - component: {fileID: 6434326519630004042}
   m_Layer: 14
-  m_Name: bull3
+  m_Name: bull5
   m_TagString: Bull
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71,9 +71,10 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -189734073
-  m_SortingLayer: 7
+  m_SortingLayer: 9
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5551defebcfac4b40a237ceb16718987, type: 3}
+  m_Sprite: {fileID: -4300622368688742482, guid: b8da721b87e9d864c906c5a0dcdeb385,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -84,6 +85,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &675291214857255380
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3485956981953236597}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0107142925, y: -0.016071588}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1.25, y: 1.25}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.9785714, y: 0.41070986}
+  m_EdgeRadius: 0
 --- !u!50 &6179564781003244485
 Rigidbody2D:
   serializedVersion: 4
@@ -105,23 +132,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!58 &1838077135565462186
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3485956981953236597}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.0024573803, y: 0.058971137}
-  serializedVersion: 2
-  m_Radius: 0.19008899
---- !u!114 &974027476565557887
+--- !u!114 &6434326519630004042
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -130,9 +141,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 3485956981953236597}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eee8c66a8870fb9478dd2105d26dfe6e, type: 3}
+  m_Script: {fileID: 11500000, guid: 34164f3d6a850ec45a9154be6b9c67bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
-  rb: {fileID: 6179564781003244485}
-  damage: 1
+  speed: 10
+  rb: {fileID: 0}
+  damage: 5
+  explodeRange: {fileID: 0}
+  startSpeed: {x: 0, y: 0}
+  delayExplodeTime: 0
+  hitBoxTime: 0
+  destroyBombTime: 0

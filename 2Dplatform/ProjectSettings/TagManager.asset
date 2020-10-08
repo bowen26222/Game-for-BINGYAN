@@ -13,6 +13,10 @@ TagManager:
   - Item
   - Triggerbox
   - Manu
+  - Gunposition
+  - GunItem
+  - BullUI
+  - PlayerUI
   layers:
   - Default
   - TransparentFX
@@ -23,7 +27,7 @@ TagManager:
   - 
   - 
   - Ground
-  - Gun
+  - gun
   - Player
   - Enemy
   - Enemygun
@@ -31,8 +35,8 @@ TagManager:
   - Bull
   - Item
   - Triggerbox
-  - 
-  - 
+  - GunItem
+  - Gunposition
   - 
   - 
   - 
@@ -64,6 +68,9 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 2180893133
+    locked: 0
+  - name: GunItem
+    uniqueID: 2064088953
     locked: 0
   - name: Gun
     uniqueID: 621437083

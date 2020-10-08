@@ -13,11 +13,12 @@ public class Attack : MonoBehaviour
     private Transform Enemy;
     private SpriteRenderer render;
     public List<Transform> targets;
-    void Awake()
+    public GetGun GetGun;
+    void Start()
     { 
         Anim = GetComponent<Animator>();
         Collider2D = GetComponent<PolygonCollider2D>();
-        render = GameObject.FindGameObjectWithTag("Gun").GetComponent<SpriteRenderer>();
+        GetGun = GameObject.FindGameObjectWithTag("Gunposition").GetComponent<GetGun>();
     }
     private void Update()
     {
@@ -30,6 +31,7 @@ public class Attack : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        render = GetGun.Gun[GetGun.currentgun].GetComponent<SpriteRenderer>();
         if (Enemy != null)
         {
             float distance = (transform.position - Enemy.position).sqrMagnitude;

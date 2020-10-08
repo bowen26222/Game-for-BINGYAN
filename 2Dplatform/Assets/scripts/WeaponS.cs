@@ -5,12 +5,15 @@ using UnityEngine.U2D;
 
 public class WeaponS : Weapon
 {
-    bool IsAttack;
     float velocityX;
-    bool IsUp;
-    public float Cooltime;
+    bool IsShooting;
+    public bullUI bullUI;
     public float AccelerateTime;
     public float DecelerateTime;
+    private void Start()
+    {
+        bullUI = GameObject.FindGameObjectWithTag("BullUI").GetComponent<bullUI>();
+    }
     // Update is called once per frame
     void Update()
     {
@@ -27,9 +30,17 @@ public class WeaponS : Weapon
                 IsUp = false;
             }
         }
-        if (Input.GetAxis("Fire1") == 1&&!IsAttack)
+        if (Input.GetAxis("Fire1") == 1 && !IsAttack && !IsShooting)
         {
-            Invoke("Shoot",Cooltime);
+            IsShooting = true;
+            bullUI.CurrentBull -= 1;
+            Shoot();
+            StartCoroutine(waittime(Cooltime));
         }
-    } 
+    }
+    IEnumerator waittime(float time)
+    {
+        yield return new WaitForSeconds(time);
+        IsShooting = false;
+    }
 }
