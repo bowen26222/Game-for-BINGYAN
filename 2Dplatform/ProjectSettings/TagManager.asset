@@ -17,6 +17,7 @@ TagManager:
   - GunItem
   - BullUI
   - PlayerUI
+  - Enemybull
   layers:
   - Default
   - TransparentFX
@@ -37,8 +38,8 @@ TagManager:
   - Triggerbox
   - GunItem
   - Gunposition
-  - 
-  - 
+  - Shield
+  - Enemybull
   - 
   - 
   - 

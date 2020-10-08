@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8188616242068326769}
   - component: {fileID: 675291214857255380}
   - component: {fileID: 6179564781003244485}
+  - component: {fileID: 1300818302}
   - component: {fileID: 6434326519630004042}
   m_Layer: 14
   m_Name: bull5
@@ -95,7 +96,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.0107142925, y: -0.016071588}
@@ -129,9 +130,28 @@ Rigidbody2D:
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!95 &1300818302
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3485956981953236597}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2ca6d10a84e1669458ae55838bdf7c88, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &6434326519630004042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,11 +164,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34164f3d6a850ec45a9154be6b9c67bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
   rb: {fileID: 0}
-  damage: 5
-  explodeRange: {fileID: 0}
-  startSpeed: {x: 0, y: 0}
-  delayExplodeTime: 0
+  damage: 1
+  explodeRange: {fileID: 681129968819795193, guid: 0e9628c9aebd30443b8c8f6af7a29e7d,
+    type: 3}
+  speed: 10
+  delayExplodeTime: 1.5
   hitBoxTime: 0
-  destroyBombTime: 0
+  destroyBombTime: 0.1

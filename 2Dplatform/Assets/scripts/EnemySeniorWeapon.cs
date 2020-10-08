@@ -25,7 +25,7 @@ public class EnemySeniorWeapon : MonoBehaviour
             float angle = (Mathf.Atan2(gunDirection.x, gunDirection.y) * Mathf.Rad2Deg + 90) * -1;
             transform.eulerAngles = new Vector3(0, 0, angle);
             float distance = (transform.position - Player.position).sqrMagnitude;
-            if (distance < radius && !IsShooting)
+            if (distance < radius*2 && !IsShooting)
             {
                 StartCoroutine(PrepareShoot(ColdTime));
             }

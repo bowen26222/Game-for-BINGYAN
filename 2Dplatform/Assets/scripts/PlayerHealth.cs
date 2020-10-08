@@ -43,14 +43,14 @@ public class PlayerHealth : MonoBehaviour
                 PlayerUI.CurrentPlayerlife -= 1;
                 Playertrans = GetComponent<Transform>();
                 Playertrans.position = new Vector3(Playertrans.position.x, Playertrans.position.y + 10, Playertrans.position.z);
-                BlinkPlayer(Blinks, time);
+                BlinkPlayer(Blinks * 3, time);
                 if (PlayerUI.CurrentPlayerlife == 0)
                 {               
                     Panel.SetActive(true);
                     Destroy(gameObject);
                 }
             }
-            BlinkPlayer(Blinks, time);
+            BlinkPlayer(Blinks * 3, time);
         }
     }
     public void BlinkPlayer(int numBlink,float seconds)

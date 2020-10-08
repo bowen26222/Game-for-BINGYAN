@@ -281,4 +281,4 @@ MonoBehaviour:
   bulletPrefab: {fileID: 3485956981953236597, guid: 49848195b361ecf4f843e7f456ff387c,
     type: 3}
   ColdTime: 0.5
-  radius: 20
+  radius: 35

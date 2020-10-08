@@ -25,13 +25,14 @@ public class ExplodeBull : MonoBehaviour
         Enemy enemy = other.GetComponent<Enemy>();
         if (enemy != null)
         {
+            rb.velocity = transform.right * speed*0;
             anim.SetTrigger("Explode");
             Invoke("GenExplosionRange", hitBoxTime);
             Invoke("DestroyThisBomb", destroyBombTime);
         }
         if (other.gameObject.CompareTag("Ground"))
         {
-            Debug.Log(1);
+            rb.velocity = transform.right * speed * 0;
             anim.SetTrigger("Explode");
             Invoke("GenExplosionRange", hitBoxTime);
             Invoke("DestroyThisBomb", destroyBombTime);
@@ -39,6 +40,7 @@ public class ExplodeBull : MonoBehaviour
     }
     void Explode()
     {
+        rb.velocity = transform.right * speed * 0;
         anim.SetTrigger("Explode");
         Invoke("GenExplosionRange", hitBoxTime);
         Invoke("DestroyThisBomb", destroyBombTime);

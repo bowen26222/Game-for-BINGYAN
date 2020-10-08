@@ -30,7 +30,7 @@ public class KillTriggerbox : MonoBehaviour
             PlayerUI.CurrentPlayerlife -= 1;
             playerHealth.Playertrans = other.GetComponent<Transform>();
             playerHealth.Playertrans.position = new Vector3(playerHealth.Playertrans.position.x-4, playerHealth.Playertrans.position.y + 10, playerHealth.Playertrans.position.z);
-            playerHealth.BlinkPlayer(playerHealth.Blinks,playerHealth.time);
+            playerHealth.BlinkPlayer(playerHealth.Blinks*3,playerHealth.time);
             if (PlayerUI.CurrentPlayerlife == 0)
             {
                 Panel.SetActive(true);

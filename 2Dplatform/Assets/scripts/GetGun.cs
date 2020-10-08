@@ -13,7 +13,6 @@ public class GetGun : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Gun = GameObject.FindGameObjectsWithTag("Gun");
         bullUI = GameObject.FindGameObjectWithTag("BullUI").GetComponent<bullUI>();
         foreach (GameObject Gun in Gun)
         {
